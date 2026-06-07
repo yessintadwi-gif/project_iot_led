@@ -23,7 +23,7 @@ void loop() {
     }
 
     // 2 = kuning nyala
-    if (perintah == '2') {
+    else if (perintah == '2') {
       digitalWrite(led_kuning, HIGH);
     }
 
