@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontrol Lampu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+        .container {
+            margin: 0 auto;
+            max-width: 400px;
+            padding: 20px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            width: 100%;
+        }
+        /* Memberikan warna khusus untuk setiap tombol agar lebih menarik */
+        .btn-merah { background-color: #e74c3c; }
+        .btn-kuning { background-color: #f1c40f; }
+        .btn-hijau { background-color: #27fc01; color: black; }
+        .btn-mati { background-color: #34495e; }
+        .btn-nyala-semua { background-color: #2ecc71; }
+        
+        button:hover { opacity: 0.8; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>KONTROL LAMPU</h2>
+
+        <button class="btn-merah" onclick="Arduino('1')">Nyalakan Merah</button>
+        <button class="btn-kuning" onclick="Arduino('2')">Nyalakan Kuning</button>
+        <button class="btn-hijau" onclick="Arduino('3')">Nyalakan Hijau</button>
+        
+        <br><br>
+        
+        <button class="btn-mati" onclick="Arduino('4')">Matikan Semua</button>
+        <button class="btn-nyala-semua" onclick="Arduino('5')">Nyalakan Semua</button>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+        
+        // Menerima data balasan dari Arduino via Node.js
+        socket.on("data", ({ data }) => {
+            let component = document.getElementById("data");
+            component.textContent = "Status Serial: " + data;
+        });
+
+        // Mengirim data perintah ke server Node.js
+        function Arduino(data) {
+            fetch("http://localhost:3000/arduinoApi", {
+                method: "POST",
+                body: JSON.stringify({ data }),
+                headers: { "Content-Type": "application/json" }
+            })
+            .then(response => {
+                console.log("Kode perintah '" + data + "' terkirim!");
+            })
+            .catch(error => {
+                console.error("Gagal mengirim data:", error);
+            });
+        }
+    </script>
+</body>
+</html>
