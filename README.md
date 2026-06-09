@@ -26,7 +26,7 @@ Buka terminal di komputer Anda (Git Bash / Command Prompt), lalu ketik perintah 
 git clone [https://github.com/febrypradana/Arduino_Project_led.git](https://github.com/febrypradana/Arduino_Project_led.git)
 Atau, Anda bisa klik tombol hijau <> Code di atas halaman GitHub ini, lalu pilih Download ZIP dan ekstrak foldernya.
 
-🛠️ Langkah 3: Menjalankan Source Code Arduino (Branch main)
+## Langkah 3: Menjalankan Source Code Arduino (Branch main)
 Langkah pertama pengujian adalah memasukkan program utama ke dalam perangkat keras Arduino:
 
 Pindah ke Branch Main:
