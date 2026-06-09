@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kontrol Lampu IoT</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f3f4f6;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.wrapper{
+    width:1200px;
+    text-align:center;
+}
+
+.wrapper h1{
+    font-size:45px;
+    color:#1f2937;
+    margin-bottom:10px;
+}
+
+.wrapper p{
+    font-size:20px;
+    color:#6b7280;
+    margin-bottom:35px;
+}
+
+.panel{
+    background:white;
+    border-radius:25px;
+    padding:35px;
+    display:flex;
+    justify-content:space-around;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+
+.lampu-box{
+    text-align:center;
+}
+
+.text-merah{
+    color:#e53935;
+    margin-bottom:20px;
+}
+
+.text-kuning{
+    color:#f4b400;
+    margin-bottom:20px;
+}
+
+.text-hijau{
+    color:#34a853;
+    margin-bottom:20px;
+}
+
+.lampu{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    margin:auto;
+    border:8px solid #ddd;
+}
+
+.merah{
+    background:#ff3b30;
+    box-shadow:0 0 25px rgba(255,0,0,.4);
+}
+
+.kuning{
+    background:#ffc107;
+    box-shadow:0 0 25px rgba(255,193,7,.5);
+}
+
+.hijau{
+    background:#2ecc71;
+    box-shadow:0 0 25px rgba(46,204,113,.5);
+}
+
+button{
+    border:none;
+    padding:18px;
+    border-radius:15px;
+    font-size:20px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+    color:white;
+}
+
+button:hover{
+    transform:translateY(-3px);
+}
+
+.btn-merah{
+    background:#ef4444;
+    width:180px;
+    margin-top:20px;
+}
+
+.btn-kuning{
+    background:#fbbc05;
+    width:180px;
+    margin-top:20px;
+}
+
+.btn-hijau{
+    background:#34a853;
+    width:180px;
+    margin-top:20px;
+}
+
+hr{
+    margin:35px 0;
+    border:1px solid #ddd;
+}
+
+.bottom-btn{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+}
+
+.btn-mati{
+    background:#334155;
+    width:450px;
+}
+
+.btn-semua{
+    background:#2563eb;
+    width:450px;
+}
+
+.status{
+    margin-top:20px;
+    font-size:18px;
+    color:#555;
+}
+</style>
+
+</head>
+<body>
+
+<div class="wrapper">
+
+    <h1>KONTROL LAMPU</h1>
+    <p>Sistem Kontrol Lampu Berbasis Arduino</p>
+
+    <div class="panel">
+
+        <div class="lampu-box">
+            <h2 class="text-merah">MERAH</h2>
+            <div class="lampu merah"></div>
+            <button class="btn-merah" onclick="Arduino('1')">
+                NYALAKAN
+            </button>
+        </div>
+
+        <div class="lampu-box">
+            <h2 class="text-kuning">KUNING</h2>
+            <div class="lampu kuning"></div>
+            <button class="btn-kuning" onclick="Arduino('2')">
+                NYALAKAN
+            </button>
+        </div>
+
+        <div class="lampu-box">
+            <h2 class="text-hijau">HIJAU</h2>
+            <div class="lampu hijau"></div>
+            <button class="btn-hijau" onclick="Arduino('3')">
+                NYALAKAN
+            </button>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div class="bottom-btn">
+        <button class="btn-mati" onclick="Arduino('4')">
+            ⏻ MATIKAN SEMUA
+        </button>
+
+        <button class="btn-semua" onclick="Arduino('5')">
+            💡 NYALAKAN SEMUA
+        </button>
+    </div>
+
+    <div class="status" id="data">
+        Status Serial : Menunggu Data...
+    </div>
+
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+
+<script>
+const socket = io();
+
+socket.on("data", ({data})=>{
+    document.getElementById("data").innerHTML =
+    "Status Serial : " + data;
+});
+
+function Arduino(data){
+
+    fetch("/arduinoApi",{
+        method:"POST",
+        headers:{
+            "Content-Type":"application/json"
+        },
+        body:JSON.stringify({data})
+    })
+    .then(()=>{
+        console.log("Data terkirim :",data);
+    })
+    .catch(err=>{
+        console.log(err);
+    });
+
+}
+</script>
+
+</body>
+</html>
