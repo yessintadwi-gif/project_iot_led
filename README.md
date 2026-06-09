@@ -80,7 +80,7 @@ node server.js
 Akses Dashboard Web:
 Buka browser (Google Chrome/Edge), lalu akses alamat: http://localhost:3000
 
-🎮 Langkah 5: Logika Pengujian Alat
+## Langkah 5: Logika Pengujian Alat
 Saat Web Dashboard telah terbuka di browser, tombol-tombol pada antarmuka akan mengirimkan perintah khusus ke Arduino dengan respon sebagai berikut:
 
 Tombol 1: Mengirim karakter '1' ➡️ Membikin LED Merah Menyala.
