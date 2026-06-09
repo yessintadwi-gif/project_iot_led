@@ -93,7 +93,4 @@ Tombol 4: Mengirim karakter '4' ➡️ Semua LED Otomatis Mati Bersamaan.
 
 Tombol 5: Mengirim karakter '5' ➡️ Semua LED Otomatis Menyala Bersamaan.
 
-Catatan: Anda juga dapat memantau aktivitas penerimaan karakter ini secara real-time melalui fitur Serial Monitor bawaan Arduino IDE dengan kecepatan 19200 baud.
-
-👥 Kontributor Proyek
-Nandana Febry Pradana (Web Dashboard Integration & Master Maintean
+Catatan: Anda juga dapat memantau aktivitas penerimaan karakter ini secara real-time melalui fitur Serial Monitor bawaan Arduino IDE de
