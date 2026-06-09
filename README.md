@@ -49,7 +49,7 @@ Masuk ke menu Tools > Port -> Pilih Port COM yang aktif (contoh: COM3). Catat no
 Upload Program:
 Klik ikon Panah Kanan (Upload) di pojok kiri atas Arduino IDE. Tunggu hingga muncul tulisan Done Uploading.
 
-💻 Langkah 4: Menjalankan Web Dashboard Smart JS (Branch master)
+## Langkah 4: Menjalankan Web Dashboard Smart JS (Branch master)
 Setelah perangkat keras Arduino siap dan menyala, jalankan aplikasi web kontrol dari VS Code:
 
 Buka Folder di VS Code:
