@@ -19,7 +19,7 @@ Sebelum menjalankan program, pastikan Anda telah merangkai komponen elektronik p
 
 ---
 
-## ⚙️ Langkah 2: Mengunduh Proyek (Clone)
+## Langkah 2: Mengunduh Proyek (Clone)
 
 Buka terminal di komputer Anda (Git Bash / Command Prompt), lalu ketik perintah berikut untuk mendownload proyek:
 ```bash
