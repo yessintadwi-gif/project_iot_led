@@ -8,7 +8,7 @@ Untuk menjaga kerapian struktur, proyek ini dibagi menjadi 2 cabang (**Branch**)
 
 ---
 
-## 🔌 Langkah 1: Skema Rangkaian Elektronika (Hardware)
+## Langkah 1: Skema Rangkaian Elektronika (Hardware)
 
 Sebelum menjalankan program, pastikan Anda telah merangkai komponen elektronik pada papan Arduino dengan konfigurasi pin sebagai berikut:
 
@@ -93,4 +93,4 @@ Tombol 4: Mengirim karakter '4' ➡️ Semua LED Otomatis Mati Bersamaan.
 
 Tombol 5: Mengirim karakter '5' ➡️ Semua LED Otomatis Menyala Bersamaan.
 
-Catatan: Anda juga dapat memantau aktivitas penerimaan karakter ini secara real-time melalui fitur Serial Monitor bawaan Arduino IDE de
+Catatan: Anda juga dapat memantau aktivitas penerimaan karakter ini secara real-time melalui fitur Serial Monitor bawaan Arduino IDE 
