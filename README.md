@@ -1,10 +1,10 @@
-# 🔌 Source Code Arduino: control led
+#  Source Code Arduino: control led
 
 Halaman ini khusus memuat kode program utama (*Source Code*) untuk mengontrol 3 buah lampu LED (Merah, Kuning, Hijau) pada mikrokontroler Arduino menggunakan komunikasi data Serial.
 
 ---
 
-## 🛠️ Skema Rangkaian Elektronika (Hardware)
+##  Skema Rangkaian Elektronika (Hardware)
 
 Sebelum mengunggah kode program, pastikan komponen elektronik pada papan Arduino Anda sudah dirangkai dengan konfigurasi pin berikut:
 
@@ -14,7 +14,7 @@ Sebelum mengunggah kode program, pastikan komponen elektronik pada papan Arduino
 * **GND (Ground):** Hubungkan semua kaki Negatif (Katoda) LED ke pin **GND** Arduino
 ---
 
-## 💻 Langkah-Langkah Menjalankan Kode Program
+##  Langkah-Langkah Menjalankan Kode Program
 
 Ikuti panduan berikut untuk memasukkan dan menguji program pada papan Arduino Anda:
 
