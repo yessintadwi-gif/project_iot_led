@@ -10,7 +10,7 @@ Sebelum mengunggah kode program, pastikan komponen elektronik pada papan Arduino
 
 * **LED Merah:** Hubungkan kaki Positif (Anoda) ke **Pin Digital 5** Arduino dan resistor ke kaki negatif (katoda).
 * **LED Kuning:** Hubungkan kaki Positif (Anoda) ke **Pin Digital 6** Arduino dan resistor ke kaki negatif (katoda).
-* **LED Hijau:** Hubungkan kaki Positif (Anoda) ke **Pin Digital 3** Arduino dan resistor ke kaki negatif (katoda).
+* **LED Hijau:** Hubungkan kaki Positif (Anoda) ke **Pin Digital 7** Arduino dan resistor ke kaki negatif (katoda).
 * **GND (Ground):** Hubungkan semua kaki Negatif (Katoda) LED ke pin **GND** Arduino
 ---
 
@@ -42,4 +42,3 @@ Program ini menerima instruksi berupa karakter/angka tunggal melalui komunikasi 
 * **Karakter `'5'`** ➡️ Menyalakan **Semua LED** secara bersamaan.
 
 Setiap kali ada yang diketik perintah angka yang masuk, Arduino akan mengirimkan umpan balik ke komputer berupa teks:  
-`Menerima: [perintah angka yang dimasukkan]`
