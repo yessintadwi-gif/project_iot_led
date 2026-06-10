@@ -36,6 +36,7 @@ void loop() {
     else if (perintah == '4') {
       digitalWrite(led_merah, LOW);
       digitalWrite(led_kuning, LOW);
+      digitalWrite(led_hijau, LOW);
 
     }
 
