@@ -12,9 +12,9 @@ Untuk menjaga kerapian struktur, proyek ini dibagi menjadi 2 cabang (**Branch**)
 
 Sebelum menjalankan program, pastikan Anda telah merangkai komponen elektronik pada papan Arduino dengan konfigurasi pin sebagai berikut:
 
-* **LED Merah:** Hubungkan kaki Positif (Anoda) ke **Pin Digital 5** Arduino.
-* **LED Kuning:** Hubungkan kaki Positif (Anoda) ke **Pin Digital 6** Arduino.
-* **LED Hijau:** Hubungkan kaki Positif (Anoda) ke **Pin Digital 3** Arduino.
+* **LED Merah:** Hubungkan kaki Positif (Anoda) ke **Pin Digital 6** Arduino.
+* **LED Kuning:** Hubungkan kaki Positif (Anoda) ke **Pin Digital 7** Arduino.
+* **LED Hijau:** Hubungkan kaki Positif (Anoda) ke **Pin Digital 8** Arduino.
 * **GND:** Hubungkan semua kaki Negatif (Katoda) LED ke pin **GND** Arduino (Gunakan resistor 220 Ohm pada masing-masing LED untuk keamanan arus).
 
 ---
