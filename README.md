@@ -8,9 +8,9 @@ Halaman ini khusus memuat kode program utama (*Source Code*) untuk mengontrol 3 
 
 Sebelum mengunggah kode program, pastikan komponen elektronik pada papan Arduino Anda sudah dirangkai dengan konfigurasi pin berikut:
 
-* **LED Merah:** Hubungkan kaki Positif (Anoda) ke **Pin Digital 5** Arduino dan resistor ke kaki negatif (katoda).
-* **LED Kuning:** Hubungkan kaki Positif (Anoda) ke **Pin Digital 6** Arduino dan resistor ke kaki negatif (katoda).
-* **LED Hijau:** Hubungkan kaki Positif (Anoda) ke **Pin Digital 7** Arduino dan resistor ke kaki negatif (katoda).
+* **LED Merah:** Hubungkan kaki Positif (Anoda) ke **Pin Digital 6** Arduino dan resistor ke kaki negatif (katoda).
+* **LED Kuning:** Hubungkan kaki Positif (Anoda) ke **Pin Digital 7** Arduino dan resistor ke kaki negatif (katoda).
+* **LED Hijau:** Hubungkan kaki Positif (Anoda) ke **Pin Digital 8** Arduino dan resistor ke kaki negatif (katoda).
 * **GND (Ground):** Hubungkan semua kaki Negatif (Katoda) LED ke pin **GND** Arduino
 ---
 
